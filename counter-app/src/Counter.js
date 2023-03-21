@@ -5,10 +5,7 @@ import Dispaly from './Display';
 import ButtonsPanel from './ButtonsPanel';
 // import Clock from './Clock';
 import ClockFunctional from './ClockFunctional';
-<<<<<<< HEAD
-=======
 import Step from './Step';
->>>>>>> d2ab869c24c9fc976094032eb975ffdc01c51245
 
 class Counter extends Component {
 
@@ -77,10 +74,7 @@ class Counter extends Component {
                 <ButtonsPanel buttonMethod={this.changeValue}/> 
                 {/* changeValue bez () bo jest to callback */}
                 {clockElement}
-<<<<<<< HEAD
-=======
                 <Step />
->>>>>>> d2ab869c24c9fc976094032eb975ffdc01c51245
             </div>
         );
     }
