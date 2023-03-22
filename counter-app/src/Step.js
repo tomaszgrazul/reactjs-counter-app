@@ -9,10 +9,10 @@ function Step(props) {
         <div className="step">
             Step:<input 
             value={stepInitialValue} 
-            onChange={(event) => {
-                // setValue({stepInitialValue: event.target.value});
-                setValue(stepInitialValue + 1);
-                props.stepMethod(event.target.value);
+            onChange={(event) => {              
+                let eventStepValue = event.target.value;
+                setValue(eventStepValue);
+                props.stepMethod(eventStepValue);
             }} 
             type="number" />
         </div>
