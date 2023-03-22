@@ -10,7 +10,7 @@ const ClockFunctional = (props) => {
     const tick = () => setDate(new Date());
 
     useEffect(() => {
-        let timerID = setInterval(() => {tick(), 1000 });
+        let timerID = setInterval(() => tick(), 1000);
         console.log('montowanie i update');
 
         return (() => {

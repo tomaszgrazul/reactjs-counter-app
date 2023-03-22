@@ -15,6 +15,7 @@ class Counter extends Component {
         this.state = {
             counterValue: this.props.initValue,
             showClock: true,
+            stepValue: 1
         };
 
         // this.changeValue = this.changeValue.bind(this);
@@ -30,7 +31,7 @@ class Counter extends Component {
 
             if (action === 'add') {
 
-                currentCounterValue += 1;
+                currentCounterValue += Number(this.state.stepValue);
 
             } else if (action === 'reinit') {
 
@@ -54,6 +55,11 @@ class Counter extends Component {
         })
     }
 
+    updateStep = (currentStepValue) => {
+        // console.log(currentStepValue);
+        this.setState({stepValue: currentStepValue});
+    };
+
     render() {
 
             let clockElement  = '';
@@ -74,7 +80,8 @@ class Counter extends Component {
                 <ButtonsPanel buttonMethod={this.changeValue}/> 
                 {/* changeValue bez () bo jest to callback */}
                 {clockElement}
-                <Step />
+                {/* <Step stepMethod={this.state.counterValue}/> */}
+                <Step stepMethod={this.updateStep}/>
             </div>
         );
     }
